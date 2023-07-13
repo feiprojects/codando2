@@ -15,7 +15,9 @@ const { href, title } = Astro.props;
 
 <style lang="scss" scoped>
   .container {
+    
     width: 100%;
+    margin-bottom: 20px;
 
     display: flex;
     flex-direction: column;
@@ -23,41 +25,47 @@ const { href, title } = Astro.props;
 
   }
   span {
+    
     width: 180px;
     height: 55px;
+    
     display: flex;
     position: relative;
     justify-content: flex-start;
     perspective: 1000px;
+
   }
   span a {
+    
     font-size: 19px;
     letter-spacing: 1px;
     transform-style: preserve-3d;
     transform: translateZ(-25px);
     transition: transform 0.25s;
+
   }
 
   span a:before,
   span a:after {
-    position: absolute;
-    content: attr(data-content);
     height: 55px;
     width: 180px;
+
+    position: absolute;
+    content: attr(data-content);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px solid black;
+    border: 5px solid rgb(255, 0, 64);
     box-sizing: border-box;
     border-radius: 5px;
   }
   span a:before {
     color: #fff;
-    background: #000;
+    background: rgb(255, 0, 64);
     transform: rotateY(0deg) translateZ(25px);
   }
   span a:after {
-    color: #000;
+    color: rgb(255, 0, 64);
     transform: rotateX(90deg) translateZ(25px);
   }
   span a:hover {
