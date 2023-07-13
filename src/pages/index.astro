@@ -5,21 +5,18 @@ import Button from "../components/Button.astro";
 ---
 
 <Layout title="Hiago Logo - Portfolio">
-  <main>
+  <div class="container">
     <h1 class="alinhamento">hiago <span class="text-gradient">.lobo</span></h1>
 
-
-    <Button
-		title="Instagram"
-		href="https://www.instagram.com/hiagolobo"
-	/>
-  </main>
+    <Button title="Instagram" href="https://www.instagram.com/hiagolobo" />
+  </div>
 </Layout>
 
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
+<style lang="scss" scoped>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   h1 {
     font-size: 3rem;
@@ -61,7 +58,7 @@ import Button from "../components/Button.astro";
   .alinhamento {
     display: flex;
     justify-content: center;
-	align-items: center;
+    align-items: center;
     margin-bottom: 20px;
   }
 </style>
